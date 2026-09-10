@@ -25,7 +25,9 @@ def list_folders(db: Session = Depends(get_db)):
 @router.post("", response_model=FolderOut, status_code=201)
 def create_folder(payload: FolderCreate, db: Session = Depends(get_db)):
     """Powers the '+' new-folder-bubble flow."""
-    folder = Folder(name=payload.name, cover_image_url=payload.cover_image_url, owner_id=uuid.uuid4())
+    folder = Folder(
+        name=payload.name, cover_image_url=payload.cover_image_url, owner_id=uuid.uuid4()
+    )
     db.add(folder)
     db.commit()
     db.refresh(folder)
