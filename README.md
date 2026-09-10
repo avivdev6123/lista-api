@@ -1,5 +1,7 @@
 # Lista API
 
+> ⚠️ **This repo has moved.** As of 2026-09-10, `lista-api` and `lista-app` were merged into one monorepo: **[avivdev6123/lista](https://github.com/avivdev6123/lista)** (backend now lives under `api/`). This repo is kept for history only — please make new changes there, not here.
+
 Backend for the Lista app (FastAPI + PostgreSQL).
 
 ## Setup
